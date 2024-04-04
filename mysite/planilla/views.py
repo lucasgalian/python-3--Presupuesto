@@ -7,7 +7,7 @@ def mostrar_presupuestos(request):
     servicios= Presupuesto.objects.all()
     return render(
         request,
-        'planilla_de_presupuestos.html',
+        'mostrar_presupuestos.html',
         {'servicios':servicios}
     )
 def detail_pres(request, id):
@@ -16,7 +16,7 @@ def detail_pres(request, id):
         request, 
         'detail_pres',
         {'servicio':servicio}
-                  ) 
+      ) 
 ##C R U D
 def create_pres(request):
     if request.method =='POST':
@@ -75,15 +75,16 @@ def delete_presupuesto(request,id):
     servicios = Presupuesto.objecte.all()
     return render(
         request,
-        'planilla_de_presupuestos.html',
-    )
+        'mostrar_presupuestos.html',
+        {'servicio':presupuestoBorrar}
+        )
 
 def delete_planilla(request):
     servicios=Presupuesto.objects.all()
     servicios.delete()
     return render(
         request,
-        'planilla_de_presupuestos.html',
+        'mostrar_presupuestos.html',
         {'usuarios':servicios}
     )
 

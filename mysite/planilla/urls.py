@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path('', views.mostrar_presupuestos, name="mostrar_presupuestos"),
-    path('detail_pres/<int:id>', views.detail_pres, name="detail_pres"),
+    path('detail_pres/', views.detail_pres, name="detail_pres"),
     path('create_pres/', views.create_pres, name="create_pres"),
     path('filtrar_presupuesto/', views.filtrar_presupuesto, name="filtrar_presupuesto"),
     path('update_presupuesto/<int:id>/<str:titulo>/<str:materiaPrima>/<str:manoDeObra>/<int:fecha>/<int:precio>/', views.update_presupuesto, name="update_presupuesto"),
