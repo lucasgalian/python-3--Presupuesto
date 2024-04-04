@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Nuevo Servicio</title>
+</head>
+<body>
+    <style>
+        *{text-align: center;}
+    </style>
+    <h1>Nuevo Presupuesto</h1>
+    <form action method="post">
+        {%csrf_token%}
+           <ul> 
+                <label for="titulo"> Titulo: </label>
+                 <input tipe="text" id="titulo" name="titulo" value="{% if servicio %}{{servicio.titulo}}{% endif %}" required><br>
+                <br><label for="materiaPrima"> Materia Primas: </label>
+                <textarea id="materiaPrima" name="materiaPrima" placeholder="Escribre la lista de materiales" required>{% if servicio %}{{servicio.materiaPrima}}{% endif %} </textarea><br>
+                <br><label for="manoDeObra"> Mano de Obra: </label>
+                <input type="number" name="manoDeObra" value="{% if servicio %}{{servicio.manoDeObra}}{% endif %}" required><br>
+                <br><label for="fecha"> Fecha: </label>
+                <input type="date" id="fecha" name="fecha" value="{% if servicio %}{{servicio.fecha}}{% endif %}"><br>
+                <br><label for="precio"> Precio: </label>
+                <input type="int" id="precio" name="precio" value="{% if servicio %}{{servicio.precio}}{% endif %}" required><br> 
+                <br><input type="submit" value="Guardar">
+            </ul>
+    </form>
+    
+     <a href= "{% url 'mostrar_presupuestos' %}">Atras</a>
+    </body>
+
+</html>

@@ -1,0 +1,25 @@
+* {
+        background-color: rgb(147, 151, 198);
+        text-align: center;
+        text-decoration: solid;
+        }
+
+p{
+    border: 200px;
+    padding-left: 80px;
+    padding-bottom: 0rcap;
+}
+
+.h3 {
+    color:rgb(87, 194, 194);
+
+}
+.btn {
+        padding: 10px 10px;
+        background-color: transparent;
+        color: #fff;
+        border-radius: 4px;
+        letter-spacing: 3px;
+        border: 1px solid #48e;
+        text-shadow: 0px opx 9px #48e, 0px 0px 3px rgba(159, 197,255, 0.454);
+}

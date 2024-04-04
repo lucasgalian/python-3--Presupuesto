@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../myproject"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../venv"
+		}
+	]
+}
